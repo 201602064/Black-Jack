@@ -6,9 +6,10 @@ public class Application {
     static int balance = 10;
     static boolean goStop = true;
     public static void main(String args[]){
-        System.out.println("◇◆ BLACKJACk 게임을 시작합니다 ◆◇");
+        System.out.println("◇◆ BLACKJACK 게임을 시작합니다 ◆◇");
 
         while(goStop) {
+            System.out.println("▷ 현재까지의 balance는 "+balance+" 입니다.");
             Deck deck = new Deck(1);
             Hand hand = new Hand(deck);
             Player player = new Player(balance,hand);
