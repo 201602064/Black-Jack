@@ -18,7 +18,7 @@ public class Player {
         if (bet > balance) {
             throw new NotEnoutghBalanceException();
         }
-        balance =- bet;
+        balance -= bet;
         this.currentBet = bet;
     }
 
