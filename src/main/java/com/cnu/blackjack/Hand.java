@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Hand {
     private Deck deck;
-    private List<Card> handList = new ArrayList<>();
+    private List<Card> cardList = new ArrayList<>();
 
     public Hand(Deck deck) {
         this.deck = deck;
@@ -13,11 +13,11 @@ public class Hand {
 
     public Card drawCard() {
         Card card = deck.drawCard();
-        handList.add(card);
+        cardList.add(card);
         return card;
     }
 
-    public int getCurrentHandSize() {
-        return handList.size();
+    public List<Card> getCardList() {
+        return cardList;
     }
 }

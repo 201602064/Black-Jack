@@ -7,9 +7,11 @@ import lombok.Data;
 public class Player {
     private int balance;
     private int currentBet; // 배팅한 금액을 저장할 변수
+    private Hand hand;
 
-    public Player(int balance) {
+    public Player(int balance, Hand hand) {
         this.balance = balance;
+        this.hand = hand;
     }
 
     public void placeBet(int bet) {
@@ -18,5 +20,9 @@ public class Player {
         }
         balance =- bet;
         this.currentBet = bet;
+    }
+
+    public Card hitCard() {
+        return hand.drawCard();
     }
 }

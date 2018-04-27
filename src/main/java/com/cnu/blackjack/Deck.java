@@ -3,6 +3,7 @@ package com.cnu.blackjack;
 import com.cnu.blackjack.exceptions.NoMoreCardException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -11,7 +12,9 @@ public class Deck {
 
     public Deck(int numberOfDeck) { // 덱을 받아올 때 덱을 만들어 줌.
         this.numberOfDeck = numberOfDeck;
+        this.cardList = new ArrayList<Card>();
         createCard(numberOfDeck);
+        Collections.shuffle(cardList);
     }
 
     private void createCard(int numberOfDeck) {
